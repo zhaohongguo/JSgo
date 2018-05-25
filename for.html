@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- for循环 -->
+	<!-- for(var i=0;i<10;i++){
+		循环的代码
+	}
+	for(初始化的变量;判断条件;变量变化){
+		循环代码
+	} -->
+	<input type="button" value="按钮" id="btn">	
+	<ul id="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+	<script>
+		var btn = document.getElementById('btn');
+		var lis = document.getElementsByTagName('li');
+		var color = ['red','yellow','blue','green','pink'];
+		btn.onclick = function(){
+			for(var i=0; i<lis.length;i++){
+				lis[i].style.background = color[i%color.length];
+			}
+		}
+	</script>
+</body>
+</html>
