@@ -62,3 +62,12 @@ JS中是一次往下循环的
 var prev = lis[0];
 null:空对象，明确知道变量要存对象，暂时没有可存的，可以先赋值null
 再循环之后要进行这个prev = this;
+
+我去，无语了，更新了github居然没有绿，很心痛。原来是邮箱出现了错误。
+在github提交了代码或者总结之后出现不绿的情况，很有可能是你的本地邮箱跟你github的邮箱不一致导致的。
+解决的办法是 打开本地的git bash，然后直接输入
+git config user.email
+查看你的本地配置邮箱，看看是否和github上面绑定的邮箱一致，如果不一致则更改一下。
+git config --global user.email "hello@163.com"
+然后再次输入  git config user.email
+看是否与你刚才输入的那个邮箱的地址一样。之后再提交代码，格子就会显绿了。
