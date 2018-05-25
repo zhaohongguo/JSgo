@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#btn{
+			width: 400px;
+			height: 400px;
+			border: 1px solid  red;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<a href="javascript:" id="btn" >开开</a>
+		<ul id="list">
+			<li>111111111</li>
+			<li>22222222</li>
+			<li>333333333</li>
+			<li>4444444444</li>
+		</ul>
+	</div>
+	<script>
+		var btn = document.getElementById('btn');
+		var list = document.getElementById('list');
+		var onOff = true;
+		btn.onclick=function(){
+			if (onOff) {
+				list.style.display='block';
+				onOff = false;
+			}else{
+				list.style.display='none';
+				onOff = true;
+			}
+		}
+
+
+		/*= 赋值  == 判断  ===全等
+			三个比两个更加严格 判断值跟类型
+		*/
+	</script>
+</body>
+</html>

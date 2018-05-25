@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="img/1.jpg" alt="" id="img">
+		<a href="javascript:" id="left"><</a>
+		<a href="javascript:" id="right">></a>
+	</div>
+	<script>
+		var img = document.getElementById('img');
+		var left = document.getElementById('left');
+		var right = document.getElementById('right');
+
+		/*var  n = 1;
+		right.onclick = function(){
+			n++;
+			img.src = 'img/'+n+'.jpg';
+		} */
+		/*数组  [] 存放多个数据
+		2个数据之间用逗隔开
+			length 数组的长度
+			[0] 下标 表示从第几个开始取值
+			最后一位是length-1
+		*/
+	var arr=['img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg'];
+		var n=0;
+		right.onclick=function(){
+			n++;
+			if (n>arr.length-1) {
+				n = arr.length-1;
+			}
+			img.src = arr[n];
+		}
+
+
+		left.onclick=function(){
+			n--;
+			if (n<0) {
+				n = arr.length-1;
+			}
+			img.src = arr[n];
+		}
+
+	/*	n++  先赋值后++
+		++n  先++再赋值*/
+	</script>
+</body>
+</html>
