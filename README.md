@@ -35,7 +35,7 @@ a%b = 余数  或者  i%2 == 0  进行各行变色
  函数之外的this  指的是window  
  函数之内的this  1.直接调用   2. 调用该事件 函数的元素对象
 
- *个人对this的新认识* 
+**个人对this的新认识**
 
  	for(var i=0;i<lis.length;i++){
 				lis[i].index = i;
@@ -95,7 +95,7 @@ git config --global user.email "hello@163.com"
 			 	mouseleave
 			 		鼠标从元素内移到元素外触发
 # 总结
-mouseover mouseout mouseenter  mouseleave  这四个都是鼠标的移入移出，但是他们是有区别的，mouserover和mouserout当两个大小不同和盒子重叠在一块。鼠标只要移入其中一个就会显示鼠标移入，鼠标向重叠部分移入就是显示在大盒子里移出，移入小盒子里。小盒子里出来就会显示移出，移入大盒子。
+**mouseover mouseout mouseenter  mouseleave**  这四个都是鼠标的移入移出，但是他们是有区别的，mouserover和mouserout当两个大小不同和盒子重叠在一块。鼠标只要移入其中一个就会显示鼠标移入，鼠标向重叠部分移入就是显示在大盒子里移出，移入小盒子里。小盒子里出来就会显示移出，移入大盒子。
 mouseenter  mouseleave 他们就与mouseover mouseout不同，他们是只要你鼠标移入就会显示mouseenter，当你鼠标进入盒子的重叠部分时候，也不会出现鼠标移出的字样，而是一直都在大盒子里。当你在小盒子里的时候，你鼠标移入会提示，鼠标移入，但是当你小盒子被大盒子包围的时候，你鼠标已经移出小盒子的范围，也不会出现鼠标移出的字样，只要你的鼠标移出到大盒子外的时候才会报出鼠标移出。
 
 # 隔行变色的问题（多种解决的方案）
@@ -115,14 +115,14 @@ lis[i].color = lis[i].className;
 
 # 前面的总结
 
-*获取元素*  
+**获取元素** 
 id  class  tag  css（querySelector）
 
 id  css  获取的是静态的
 
 tag  class  获取的是动态的
 
-*属性的操作*
+**属性的操作**
  .  []  行间 可读可写
 
 div.style.height='200px';
@@ -154,3 +154,4 @@ for(var i=0;i<length;i++){
 
 this 的指向问题
 鼠标移入移出的他们的区别与不同
+对我的readme进行大整理，更改了之前一团乱麻的样式。详情可以查看这个网址：<https://www.dushibaiyu.com/2014/05/github_readme-md_markdown.html>
