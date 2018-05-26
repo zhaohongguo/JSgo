@@ -112,20 +112,29 @@ lis[i].color = lis[i].className;
 4.鼠标移入移出li
 
 前面的总结
+
 获取元素  id  class  tag  css（querySelector）
+
 id  css  获取的是静态的
+
 tag  class  获取的是动态的
 
 属性的操作  .  []  行间 可读可写
 
 div.style.height='200px';
+
 div.style['background-color']='red';
 
+if语句
 if(){
 	
 }else{
 	
 }
+
+
+if----else---if---else
+
 if(){
 	
 }else if(){
@@ -133,6 +142,9 @@ if(){
 }else if(){
 	
 }
+
+
+
 for 循环
 for(var i=0;i<length;i++){
 	
