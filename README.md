@@ -71,3 +71,71 @@ git config user.email
 git config --global user.email "hello@163.com"
 然后再次输入  git config user.email
 看是否与你刚才输入的那个邮箱的地址一样。之后再提交代码，格子就会显绿了。
+
+5-26 总结
+for循环套用for循环
+	for(var i=0;i<10;i++){
+				console.log('外:'+i)
+				for(var j=0;j<10;j++){
+					console.log('内'+j)
+				}
+			}
+在循环的套用中需要去改变循环中的变量
+
+鼠标的移入移出（mouseover  mouseout）
+				mouseover
+			 		鼠标从元素外移入元素内，从元素内移入子元素，都会触发
+			 		
+			 	mouseout
+			 		鼠标从元素内移到元素外，从元素内移入子元素，都会触发
+				mouseenter
+			 		鼠标从元素外移入元素内触发
+			 		
+			 	mouseleave
+			 		鼠标从元素内移到元素外触发
+总结：mouseover mouseout mouseenter  mouseleave  这四个都是鼠标的移入移出，但是他们是有区别的，mouserover和mouserout当两个大小不同和盒子重叠在一块。鼠标只要移入其中一个就会显示鼠标移入，鼠标向重叠部分移入就是显示在大盒子里移出，移入小盒子里。小盒子里出来就会显示移出，移入大盒子。
+mouseenter  mouseleave 他们就与mouseover mouseout不同，他们是只要你鼠标移入就会显示mouseenter，当你鼠标进入盒子的重叠部分时候，也不会出现鼠标移出的字样，而是一直都在大盒子里。当你在小盒子里的时候，你鼠标移入会提示，鼠标移入，但是当你小盒子被大盒子包围的时候，你鼠标已经移出小盒子的范围，也不会出现鼠标移出的字样，只要你的鼠标移出到大盒子外的时候才会报出鼠标移出。
+
+隔行变色的问题（多种解决的方案）
+1.可以利用之前的if-取模
+	if（i%2）{
+		XXX.className='颜色';
+	}else{
+		XXX.className='颜色';
+	}
+2.利用索引值得方法
+lis[i].index = i;（索引指的就是i）
+3.自定义属性  存数据，私有化
+lis[i].color = lis[i].className;
+
+	lis[i].check = false;
+4.鼠标移入移出li
+
+前面的总结
+获取元素  id  class  tag  css（querySelector）
+id  css  获取的是静态的
+tag  class  获取的是动态的
+
+属性的操作  .  []  行间 可读可写
+
+div.style.height='200px';
+div.style['background-color']='red';
+
+if(){
+	
+}else{
+	
+}
+if(){
+	
+}else if(){
+	
+}else if(){
+	
+}
+for 循环
+for(var i=0;i<length;i++){
+	
+}
+this 的指向问题
+鼠标移入移出的他们的区别与不同
