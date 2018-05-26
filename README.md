@@ -164,6 +164,6 @@ this 的指向问题
 
 3、打开README.md 进入编辑状态。放入如下代码进入编辑框。保存即可看见效果
 
-![image]（这必须写字要不，不显示地址，而显示图片）(https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png)
+![image]（这必须写字要不，不显示地址，而显示图片，你们弄得时候可以把括号里的字去掉）(https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png)
 
 其中  https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png  是我的图片地址。你们替换成你想显示的图片地址即可。
