@@ -157,3 +157,13 @@ for(var i=0;i<length;i++){
 this 的指向问题
 鼠标移入移出的他们的区别与不同
 对我的readme进行大整理，更改了之前一团乱麻的样式。详情可以查看这个网址：<https://www.dushibaiyu.com/2014/05/github_readme-md_markdown.html>
+# 如何在github上插入图片
+1、首先把图片放到程序里。提交到Github远程仓库。
+
+2、在浏览器进入远程Github仓库找到图片打开图片。那么当前浏览器链接就是图片地址。复制出来。
+
+3、打开README.md 进入编辑状态。放入如下代码进入编辑框。保存即可看见效果
+
+![image](https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png)
+
+其中  https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png  是我的图片地址。你们替换成你想显示的图片地址即可。
