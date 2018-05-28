@@ -167,3 +167,116 @@ this 的指向问题
 ![image]（这必须写字要不，不显示地址，而显示图片，你们弄得时候可以把括号里的字去掉）(https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png)
 
 其中  https://github.com/zhaohongguo/JSgo/blob/master/image/mouseover%20mouseout%20mouseenter%20%20mouseleave.png  是我的图片地址。你们替换成你想显示的图片地址即可。
+
+# 5-28
+# 数据的类型
+# 基础类型（简单类型）
+				 		1.String,字符串  var str='123';
+				 		2.Number，数字	  var  n = 1;
+				 		3.Boolean，布尔值  true false
+				 		4.Null，空      只有一个值
+				 		5.Undefined，未定义  复合类型 ：由基本类型和复合类型组成
+		Boolean，布尔值
+			  		true false
+			  
+			  比较两边的值，如果数据类型不同，会先转成相同类型，再比较值是否相等
+			   == 两边值相同返回true 不同返回false，不比较数据类型 
+			  
+			  !=   不同返回true 相同返回false，不比较数据类型 
+			  
+			   ===  两边值相同并且数据类型相同返回true 不同返回false，比较数据类型
+			  !==  两边值或者数据类型有一个不相同返回true 都相同返回false，比较数据类型
+
+
+		Null，空
+			 		只有一个值null
+			 	使用：
+			 		1.想存一个对象类型的数据，暂时没有可存的，先赋值为null
+			 		2.解绑用on绑定的事件函数
+			 		btn.onclick = null
+		Undefined,未定义
+			 		只有一个值：undefined
+			 		我们不会主动赋值undefined，系统会给为赋值的变量，默认值为undefined
+	数据类型中还有一个Object（对象）键值对：{}，无序性  数组：[],有序性
+
+	问题？无序性  有序性什么意思？？
+
+	7.ES6新增的Symbol 特殊字符串  为了解决命名冲突覆盖的问题
+
+	循环对象
+	for(var  自定义 in  对象){
+
+	}
+
+# typeof 检测数据类型
+			 		返回是的数据类型字符串，小写
+			 number string boolean undefined object function symbol
+# 数据类型转换
+			 		任意数据类型都可以转成字符串，数字，布尔值
+			 	js提供三种原生转换方法
+			 		String()
+			 		Number()
+			 		Boolean()
+# 转字符串
+			 		String()
+			 		简单方法：''+数据    var n = ''+1;
+# 转数字
+			 		Number()
+			 		
+			 	1.字符串
+			 		空字符串转成0			var str = '';
+			 		忽略前后空格			var str3 = '    10    ';
+			 		忽略前边的0				var str4 = '    000010    ';
+			 		转不成纯数字就返回NaN		var str6 = '100px';
+
+		console.log(typeof NaN)      number 
+
+# 布尔值  
+true  1   false  0
+
+# null   
+var Null = null  console.log(Numner(Null))   0
+# undefined   
+var a;  console.log(Number(a))    NaN
+
+# object
+		空数组：0
+		非空数组：NaN
+		键值对：NaN
+
+# NaN			
+				NaN不等于任何值，包括自己 
+				不可以用做比较
+				isNaN()判断是否是NaN的方法
+				先Number()方法，把括号里的数据转成数字类型，如果是NaN返回true，不是返回false
+parserInt()  转成整数
+parserFloat()  转成小数
+
+				1.空字符串转成NaN    var str = '';
+			 	2.忽略前后空格		var  str1 = '     10.3    ';
+			 	3.忽略前边的0		var  str2 = '  000010.6  ';
+			 	4.忽略第一位非数字后边	var str3 = '100px';
+# 转布尔值
+			 		Boolean()
+			 		简单方法：！！
+			 		1.字符串
+			 			var str = '';  false
+			 			var  str= '123' true
+			 		2.数字
+			 			var  a = 0 ;  false
+			 			var  a1 = -2;  true
+			 			var  Null = null  false
+			 		3.undefined   false
+			 		4.null   false
+			 		5.Object  var a = {}  false
+			 		var a2={q:1}  true
+
+			 		false(5种): 	''  0  NaN  null undefined	
+	# 隐式类型转换
+			 系统为了运算需要，偷偷的把数据类型转换
+			  
+			 我们主动调用某种方法，明确的将一种数据类型转成指定数据类型，叫显示类型转换
+
+转换数字可以用 Number直接转  paserInt  paserFloat
+
++   隐式类型转换
