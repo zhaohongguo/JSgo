@@ -358,3 +358,29 @@ continue 跳过本次循环
 			 				a:function(){}
 			 			}
 			 			只能先声明，后调用，可访问的范围由变量在哪声明决定
+
+# 5-30
+函数参数
+  形参和实参
+  					形参
+			 			在函数内部使用的变量，在函数声明时要定义形参，默认值是undefined,写在小括号内，多个值间用逗号分隔
+			 		实参
+			 			在函数调用时传入的值，一一对应赋值给形参，写在函数调用的小括号里，多个值间用逗号分隔
+传参  
+	结构相同，功能相同，用函数传参
+# arguments
+				在函数内部使用，传入实参的集合,一般用在不定参时,在函数传入实参时，会一一对应赋值给形参，还会把实参存在arguments里
+			 	[0],length
+			 	arguments.callee:存的是该函数体
+# getComputedStyle(元素对象)
+				getComputedStyle是一个可以获取当前元素所有最终使用的CSS属性值。返回的是一个CSS样式声明对象([object CSSStyleDeclaration])，只读。（getComputedStyle方法是不支持IE6·8的,IE有一个自带的属性，currentStyle）
+
+				获取某个元素对象渲染到页面上，计算后的样式的对象,带单位
+				getComputedStyle(元素对象).样式名
+				获取复合样式,颜色,css3需要注意下
+  var box = document.getElementById('box');
+			console.log(getComputedStyle(box).transform)
+# break ,continue ,return 的区别及作用？
+break 跳出总上一层循环，不再执行循环(结束当前的循环体)
+continue 跳出本次循环，继续执行下次循环(结束正在执行的循环 进入下一个循环条件) 
+return 程序返回，不再执行下面的代码(结束当前的方法 直接返回) 
