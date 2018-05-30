@@ -103,7 +103,9 @@ for 循环 for(var i=0;i<length;i++){
 
 }
 
-# this 的指向问题 鼠标移入移出的他们的区别与不同 对我的readme进行大整理，更改了之前一团乱麻的样式。详情可以查看这个网址：https://www.dushibaiyu.com/2014/05/github_readme-md_markdown.html
+# this 的指向问题 
+
+鼠标移入移出的他们的区别与不同 对我的readme进行大整理，更改了之前一团乱麻的样式。详情可以查看这个网址：https://www.dushibaiyu.com/2014/05/github_readme-md_markdown.html
 
 # 如何在github上插入图片
 1、首先把图片放到程序里。提交到Github远程仓库。
