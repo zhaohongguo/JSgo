@@ -303,3 +303,35 @@ var box = document.getElementById('box'); console.log(getComputedStyle(box).tran
 
 # break ,continue ,return 的区别及作用？
 break 跳出总上一层循环，不再执行循环(结束当前的循环体) continue 跳出本次循环，继续执行下次循环(结束正在执行的循环 进入下一个循环条件) return 程序返回，不再执行下面的代码(结束当前的方法 直接返回)
+
+# 5-31
+# 作用域
+	全局作用域和局部作用域
+	全局作用域写在函数外边的
+	局部作用域写在函数的内部
+a ,fn , 是全局变量，函数
+var a = 11;
+function fn(){
+b,fn2是局部变量，局部函数
+	var b = 12;
+	function fn2(){
+
+	}
+}
+# 全局作用域
+	全局变量，全局函数，全局可以访问
+# 局部作用域
+	局部变量
+	函数只能在该函数内部访问,外部访问不了
+# 作用域链
+	使用变量/函数时，查找规则
+			 		
+	函数内部->形参->函数外部
+for in只能循环全部
+for可以循环全部或者局部，可正可倒
+div~p 兄弟哦 div 后面的所有P
+div+p 兄弟哦 div后面紧挨着的第一个p
+div p 父子 孙子 div内部的所有P
+div>p  父子 div内部第一级所有p
+# window
+	是js里最外边的对象,当写window下的属性或方法时，可以忽略不写window
