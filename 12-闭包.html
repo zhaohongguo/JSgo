@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" value="按钮" id="btn"/>
+		<script>
+			/*
+			 	闭包
+			 		函数套函数声明，内部会形成闭包空间
+			 * 
+			 * */
+//			function fn(){
+//				var a = 1;
+//				function fn1(){
+//					a++;
+//					console.log(a)
+//				}
+//				fn1();
+//			}
+//			fn()
+//			fn()
+	
+	
+			function fn(){
+				var btn = document.getElementById('btn');
+				var a = 1;
+				function fn1(){
+					a++;
+					console.log(a)
+				}
+				btn.onclick = function(){
+					a++;
+					console.log(a);
+				}
+				return fn1;
+			}
+			var f = fn();//1
+			f()//2
+			f()
+			//f = null
+//			var f2 = fn();//1
+//			f2()
+//			f2()
+		</script>
+	</body>
+</html>
