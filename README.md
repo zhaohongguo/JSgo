@@ -341,3 +341,67 @@ div>p  父子 div内部第一级所有p
 	变量存在的周期，时间
 			 		
 	函数内声明的变量，在函数执行时创建，在函数执行完，如果没有引用，销毁
+# 6-2
+
+js自执行函数表达式
+// 下面2个括弧()都会立即执行
+
+(function () { /* code */ } ()); // 推荐使用这个
+(function () { /* code */ })(); // 但是这个也是可以用的
+和普通function执行的时候传参数一样，自执行的函数表达式也可以这么传参，因为闭包直接可以引用传入的这些参数，利用这些被lock住的传入参数，自执行函数表达式可以有效地保存状态。
+
+// 这个代码是错误的，因为变量i从来就没背locked住
+// 相反，当循环执行以后，我们在点击的时候i才获得数值
+// 因为这个时候i操真正获得值
+// 所以说无论点击那个连接，最终显示的都是I am link #10（如果有10个a元素的话）
+
+var elems = document.getElementsByTagName('a');
+
+for (var i = 0; i < elems.length; i++) {
+
+    elems[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        alert('I am link #' + i);
+    }, 'false');
+
+}
+
+// 这个是可以用的，因为他在自执行函数表达式闭包内部
+// i的值作为locked的索引存在，在循环执行结束以后，尽管最后i的值变成了a元素总数（例如10）
+// 但闭包内部的lockedInIndex值是没有改变，因为他已经执行完毕了
+// 所以当点击连接的时候，结果是正确的
+
+var elems = document.getElementsByTagName('a');
+
+for (var i = 0; i < elems.length; i++) {
+
+    (function (lockedInIndex) {
+
+        elems[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('I am link #' + lockedInIndex);
+        }, 'false');
+
+    })(i);
+
+}
+
+// 你也可以像下面这样应用，在处理函数那里使用自执行函数表达式
+// 而不是在addEventListener外部
+// 但是相对来说，上面的代码更具可读性
+
+var elems = document.getElementsByTagName('a');
+
+for (var i = 0; i < elems.length; i++) {
+
+    elems[i].addEventListener('click', (function (lockedInIndex) {
+        return function (e) {
+            e.preventDefault();
+            alert('I am link #' + lockedInIndex);
+        };
+    })(i), 'false');
+
+}
+
+# 闭包的理解
+闭包就是一个函数引用另外一个函数的变量，因为变量被引用着所以不会被回收，因此可以用来封装一个私有变量。这是优点也是缺点，不必要的闭包只会徒增内存消耗！另外使用闭包也要注意变量的值是否符合你的要求，因为他就像一个静态私有变量一样。闭包通常会跟很多东西混搭起来，接触多了才能加深理解
