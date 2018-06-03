@@ -405,3 +405,90 @@ for (var i = 0; i < elems.length; i++) {
 
 # 闭包的理解
 闭包就是一个函数引用另外一个函数的变量，因为变量被引用着所以不会被回收，因此可以用来封装一个私有变量。这是优点也是缺点，不必要的闭包只会徒增内存消耗！另外使用闭包也要注意变量的值是否符合你的要求，因为他就像一个静态私有变量一样。闭包通常会跟很多东西混搭起来，接触多了才能加深理解
+
+# 6-3 之前总结
+1.数据类型
+				ECMA:string,number,boolean,null,undefined,object
+				typeof:string,number,boolean,function,undefined,object
+				
+			2.数据类型转换
+				String()， ''+数据类型 = 字符串类型
+				Number()，
+					string:''->0,纯数字字符串->数字
+					boolean:true:1,false:0
+					null:0
+					空数组：0
+					
+					只用来字符串转数字，''->NaN
+					parseInt()整数
+					parseFloat()小数
+					
+				Boolean()，！！
+				false:'',0,NaN,null,undefined
+			3.NaN
+				数字类型，其他数据类型转数字类型不成功的产物，NaN不等于任何值，包括自己，不可以做比较，都是false,isNaN()
+			
+			4.隐式类型转换
+				var n = 'abc'-10 = NaN
+			5.操作符，运算符
+			运算：+ - * /
+			关系：> < == ===
+			逻辑：|| && ！
+			逗号：
+			条件，三目：a?b:c
+			流程：
+				switch,while
+				switch(条件){
+					case 条件1；
+					break
+				}
+			条件 === 条件1，break穿透性
+			
+			break:跳出，终止循环
+			continue:跳过本次循环
+			
+			6.运算符优先级
+			
+			7.函数参数，返回值
+				形参，实参，arguments
+			function fn(a){
+				var a
+			}
+			
+			return 数据类型，表达式
+			1.终止函数内后续代码执行
+			2.返回我们指定数据
+			
+			函数名() = 函数返回值
+			就是return后边的东西
+			function fn(){
+				alert(1)
+				return 2
+			}
+			alert(fn())
+			
+			
+			function checkedAll(){
+				if(全选了){
+					return true;
+				}else{
+					return false
+				}
+			}
+			
+			if(checkedAll()){
+				checkedAll()
+			}else{
+				checkedAll()
+			}
+			
+			8.作用域
+				全局，局部，作用域链
+				
+			9.预解析
+			
+			10.window
+			
+			11.闭包
+			
+			12.函数自执行
