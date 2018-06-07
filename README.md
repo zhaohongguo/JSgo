@@ -801,3 +801,47 @@ Var name2=window.setInterval(“js代码”，时间t)
 一次性定时器  windowclearTimeout(name1);
 
 反复性定时器  window.clearInterval(name2);
+
+# 6-7
+JS中常用的截取函数有3个：slice();substring();
+substr();他们都是0开头。
+## slice();
+使用一个参数（n）里面是数字几就从几开始，有点也返回知道最后一位。
+使用两个参数(3,5)则表示的是从第3位截取到第5位之间
+如果只有一个参数并且这个参数为0，则返回整个参数。
+alert(a.slice(0,1))返回当前参数第一位。slice和substring的用法相同。如果有负数的出现他俩则不同。
+alert(a.slice(2,-5))  (2,3)
+alert(a.substring(2,-5)) 负5加上字符串长度8转换成正3(若第一位数字等于或大于第二位数字,则返回空字符串);
+split()用指定字符分隔字符串，把结果放到数组里返回
+# Math,数学对象
+			 	有数学方法供我们使用
+			 	Math.PI	圆周率
+			 	Math.abs()绝对值
+			 	Math.cos()余弦
+			 	Math.sin()正弦
+			 	Math.tan()正切
+			 	Math.ceil()向上取整
+			 	Math.floor()向下取整
+			 	Math.random()0~1之间的随机小数，不包含0和1
+			 	Math.round()四舍五入
+			 	Math.pow(a,b)a的b次方
+			 	Math.sqrt(a,b)a开b次方
+			 	Math.max(n1,n2...)最大值
+			 	Math.min(n1,n2...)最小值
+# JSON
+			 	JavaScript Object Notation
+			 		数据交换格式
+			 		长得像对象的字符串
+			 		两种规格'{}','[]'
+			 		属性名必须是双引号
+			 		不能写undefined
+			 		
+			 		字符串必须双引号
+			 		数字,布尔值，null,对象
+			 		
+			 		
+			 		
+			 		JSON.parse()
+			 			JSON字符串转对象
+			 		JSON.stringify()
+			 * 			对象转JSON字符串
