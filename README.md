@@ -890,3 +890,22 @@ array.lastIndexOf(target,[start])
 			 		1.找到返回位置下标
 			 		2.没找到返回-1
 			 		3.从右向左
+array.includes(target)
+			  作用：
+			 		数组里是否包含指定值
+			  参数：
+			  	target:指定值
+			  返回值：boolean
+			  		1.有,true
+			       2.没有,false
+			       3.===
+array.slice(start,[end])
+			 	作用：
+			 		截取数组中的一段数据放新数组里返回
+			 	参数：
+			 		start：起始位置
+			 		[end]:终止位置，可选，默认到最后一位
+			 	返回值：array
+			 	   1.不传参数，返回完整新数组
+			 	   2.截取起始位置到终止位置的数据，不包含终止位置，放新数组里返回
+			 	   3.负数，长度+负数
