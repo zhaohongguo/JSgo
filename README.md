@@ -589,295 +589,295 @@ var date = new Date()
 # 内置对象
 ## Array对象：
 
-属性：
+ 属性：
 
-.length      获得数组的长度；
+ .length      获得数组的长度；
 
-方法：
+ 方法：
 
-.concat（） 连接内容或者数组，组成新的数组；
+ .concat（） 连接内容或者数组，组成新的数组；
 
-.join（n）  用n连接数组的每一项组成字符串，可以是空字符串；
+ .join（n）  用n连接数组的每一项组成字符串，可以是空字符串；
 
-.pop（） 删除数组的最后一项数据，并返回删除的数据；
+ .pop（） 删除数组的最后一项数据，并返回删除的数据；
 
-.push（）  在数组最后加入新的内容返回新的数组的长度
+ .push（）  在数组最后加入新的内容返回新的数组的长度
 
-.reverse（） 翻转数组；
+ .reverse（） 翻转数组；
 
 ## String对象
 
-属性：
+ 属性：
 
-.length  获取字符串的长度。
+ .length  获取字符串的长度。
 
-方法：
+ 方法：
 
-.charAt（n）  找到位置在n（索引）上的字符。
+ .charAt（n）  找到位置在n（索引）上的字符。
 
-.charCodeAt（n）  找到索引位置上的字符的编码：a=97，A=65。
+ .charCodeAt（n）  找到索引位置上的字符的编码：a=97，A=65。
 
-.indexOf（“m”） 查找字符m在字符串中第一次出现的索引；如果没有找到返回-1。
+ .indexOf（“m”） 查找字符m在字符串中第一次出现的索引；如果没有找到返回-1。
 
-.lastIndexOf（“m”）  查找字符m在字符串中最后一次出现的索引；如果没有找到返回-。
+ .lastIndexOf（“m”）  查找字符m在字符串中最后一次出现的索引；如果没有找到返回-。
 
-.split（“n”）  以字符n分割字符串，并返回一个数组，空字符串时分割每个字符，如果字符串中没有该字符，同样返回数组。
+ .split（“n”）  以字符n分割字符串，并返回一个数组，空字符串时分割每个字符，如果字符串中没有该字符，同样返回数组。
 
-.substr（n，m）   截取字符串，从索引是n的位置开始截取，截取m个字符；如果只有一个参数n，那就是从n开始截取，截取到最后。
+ .substr（n，m）   截取字符串，从索引是n的位置开始截取，截取m个字符；如果只有一个参数n，那就是从n开始截取，截取到最后。
 
-.substring（n，m）  截取字符串，从索引是n的位置开始截取，截取到第m个字符（m娶不到）；如果只有一个参数n，那就是从n开始截取，截取到最后。
+ .substring（n，m）  截取字符串，从索引是n的位置开始截取，截取到第m个字符（m娶不到）；如果只有一个参数n，那就是从n开始截取，截取到最后。
 
-.toLowerCase()   把字符串中的字母转化成小写。
+ .toLowerCase()   把字符串中的字母转化成小写。
 
-.toUpperCase()   把字符串中的字母转化成大写。
+ .toUpperCase()   把字符串中的字母转化成大写。
 
 ## Math对象
 
-方法：
+ 方法：
 
-Math.pow(n,m)   n的m次方。
+ Math.pow(n,m)   n的m次方。
 
-Math.abs(n)    n到原点的距离（n的绝对值）。
+ Math.abs(n)    n到原点的距离（n的绝对值）。
 
-Math.round(n)   四舍五入取整。
+ Math.round(n)   四舍五入取整。
 
-Math.floor(n)   地板函数（向下取整）。
+ Math.floor(n)   地板函数（向下取整）。
 
-Math.ceil(n)    天花板函数 （向上取整）。
+ Math.ceil(n)    天花板函数 （向上取整）。
 
-Math.random()     返回0-1的随机数（取不到1）。
+ Math.random()     返回0-1的随机数（取不到1）。
 
-注意：[n，m] 随机数为了能取到n，m                Math.floor(Math.random())*(m-n+1)+n)。
+ 注意：[n，m] 随机数为了能取到n，m                Math.floor(Math.random())*(m-n+1)+n)。
 
 ## 特殊字符
 
-\r  回车
+ \r  回车
 
-\n  换行
+ \n  换行
 
 ## Date对象  
  var date = new Date（）；
 
-方法：
+ 方法：
 
-.toLocaleString()   以当前本地格式显示时间。
+ .toLocaleString()   以当前本地格式显示时间。
 
-date.getFullYear()   获取date对象的年份。
+ date.getFullYear()   获取date对象的年份。
 
-date.getMonth()   获取月份（0-11）对应1-12月。
+ date.getMonth()   获取月份（0-11）对应1-12月。
 
-date.getDate()   获取日期。
+ date.getDate()   获取日期。
 
-date.getHours（） 获取小时。
+ date.getHours（） 获取小时。
 
-date.getMinutes（） 获取分钟
+ date.getMinutes（） 获取分钟
 
-date.getSeconds（） 获取多少秒
+ date.getSeconds（） 获取多少秒
 
-date.getMilliSeconds（） 毫秒数
+ date.getMilliSeconds（） 毫秒数
 
-date.getDay（）  获取星期几（0-6） 对应 周天至周六。
+ date.getDay（）  获取星期几（0-6） 对应 周天至周六。
 
-date.getTime()   从1970年开始到时间日期的毫秒值（时间戳）
+ date.getTime()   从1970年开始到时间日期的毫秒值（时间戳）
 
-date.setFullYear   设置年份
+ date.setFullYear   设置年份
 
-...
-
-...
+ ...
+ 
+ ...
 
 ## 鼠标事件：
 
-onclick  鼠标点击事件
+ onclick  鼠标点击事件
 
-onmouseover   鼠标放上
+ onmouseover   鼠标放上
 
-onmouseout   鼠标离开
+ onmouseout   鼠标离开
 
-ondblclick   双击事件
+ ondblclick   双击事件
 
-onmousedown   鼠标按下
+ onmousedown   鼠标按下
 
-onmouseup    鼠标抬起
+ onmouseup    鼠标抬起
 
-onmousemove    鼠标移动 
+ onmousemove    鼠标移动 
 
 ## 表单事件：
 
-onfocus  获得焦点
+ onfocus  获得焦点
 
-onblur  失去焦点
+ onblur  失去焦点
 
-onsubmit   提交事件
+ onsubmit   提交事件
 
-onchange  发生改变时候
+ onchange  发生改变时候
 
-onreset  重置事件
+ onreset  重置事件
 
 ## 键盘事件：
 
-onkeyup   按键抬起
+ onkeyup   按键抬起
 
-onkeydown     按键 按下
+ onkeydown     按键 按下
 
-onkeypress    键盘按下一次
+ onkeypress    键盘按下一次
 
 ## 窗口事件：
 
-onload  事件（页面加载完成后立即执行）
+ onload  事件（页面加载完成后立即执行）
 
 ## 两种方法
 
-1、<script>window.onload=”init”；</script>   //init 为函数名
+ 1、<script>window.onload=”init”；</script>   //init 为函数名
 
-2、<body onload=”init()”></body>   // init()  是一个完整的函数
+ 2、<body onload=”init()”></body>   // init()  是一个完整的函数
 
 ## Event ：
 
-保存事件发生时的相关信息
+ 保存事件发生时的相关信息
 
-event.clientX:   事件发生时的X的坐标
+ event.clientX:   事件发生时的X的坐标
 
-event.clientY:   事件发生时Y的坐标
+ event.clientY:   事件发生时Y的坐标
 
-event.target     事件源
+ event.target     事件源
 
-注意：event必须通过以实参传递给函数才能使用
+ 注意：event必须通过以实参传递给函数才能使用
 
  
 
-Var obj=document.createElement(“标签名”);
+ Var obj=document.createElement(“标签名”);
 
-document.body.appendChild(obj); 
+ document.body.appendChild(obj); 
 
 ## Window对象
 
-alert（）
+ alert（）
 
-confirm （）   弹窗显示 确定  取消
+ confirm （）   弹窗显示 确定  取消
 
-prompt （）    输入框
+ prompt （）    输入框
 
-window .open(“链接”，“name”，“设置”);
+ window .open(“链接”，“name”，“设置”);
 
-1、width
+ 1、width
 
-2、height
+ 2、height
 
-3、left
+ 3、left
 
-4、top
+ 4、top
 
-5、scrollbars    yes  no  滚动条
+ 5、scrollbars    yes  no  滚动条
 
-6、toolbar   yes no 工具栏
+ 6、toolbar   yes no 工具栏
 
-7、location    地址栏（浏览器）   
+ 7、location    地址栏（浏览器）   
 
-8、close（）   只有通过js代码打开的窗口才能关闭
+ 8、close（）   只有通过js代码打开的窗口才能关闭
 
-每个个设置属性用“，”隔开，7和8需要用户允许
+ 每个个设置属性用“，”隔开，7和8需要用户允许
 
 ## 定时器：
 
-一次性定时器：
+ 一次性定时器：
 
-Var name1=window.setTimeout(“js代码”，时间t)
+ Var name1=window.setTimeout(“js代码”，时间t)
 
-执行： 时间t之后执行js代码 。
+ 执行： 时间t之后执行js代码 。
 
-周期：毫秒计算。
+ 周期：毫秒计算。
+ 
+ 反复性定时器：
 
-反复性定时器：
+ Var name2=window.setInterval(“js代码”，时间t)
 
-Var name2=window.setInterval(“js代码”，时间t)
+ 执行：每时间t就执行一次
 
-执行：每时间t就执行一次
+ 周期以毫秒计算
 
-周期以毫秒计算
+ 清除定时器：必须给定时器一个名字
 
-清除定时器：必须给定时器一个名字
+ 一次性定时器  windowclearTimeout(name1);
 
-一次性定时器  windowclearTimeout(name1);
-
-反复性定时器  window.clearInterval(name2);
+ 反复性定时器  window.clearInterval(name2);
 
 # 6-7
-JS中常用的截取函数有3个：slice();substring();
-substr();他们都是0开头。
+ JS中常用的截取函数有3个：slice();substring();
+ substr();他们都是0开头。
 ## slice();
-使用一个参数（n）里面是数字几就从几开始，有点也返回知道最后一位。
-使用两个参数(3,5)则表示的是从第3位截取到第5位之间
-如果只有一个参数并且这个参数为0，则返回整个参数。
-alert(a.slice(0,1))返回当前参数第一位。slice和substring的用法相同。如果有负数的出现他俩则不同。
-alert(a.slice(2,-5))  (2,3)
-alert(a.substring(2,-5)) 负5加上字符串长度8转换成正3(若第一位数字等于或大于第二位数字,则返回空字符串);
-split()用指定字符分隔字符串，把结果放到数组里返回
+ 使用一个参数（n）里面是数字几就从几开始，有点也返回知道最后一位。
+ 使用两个参数(3,5)则表示的是从第3位截取到第5位之间
+ 如果只有一个参数并且这个参数为0，则返回整个参数。
+ alert(a.slice(0,1))返回当前参数第一位。slice和substring的用法相同。如果有负数的出现他俩则不同。
+ alert(a.slice(2,-5))  (2,3)
+ alert(a.substring(2,-5)) 负5加上字符串长度8转换成正3(若第一位数字等于或大于第二位数字,则返回空字符串);
+ split()用指定字符分隔字符串，把结果放到数组里返回
 # Math,数学对象
-			 	有数学方法供我们使用
-			 	Math.PI	圆周率
-			 	Math.abs()绝对值
-			 	Math.cos()余弦
-			 	Math.sin()正弦
-			 	Math.tan()正切
-			 	Math.ceil()向上取整
-			 	Math.floor()向下取整
-			 	Math.random()0~1之间的随机小数，不包含0和1
-			 	Math.round()四舍五入
-			 	Math.pow(a,b)a的b次方
-			 	Math.sqrt(a,b)a开b次方
-			 	Math.max(n1,n2...)最大值
-			 	Math.min(n1,n2...)最小值
+ 有数学方法供我们使用
+	Math.PI	圆周率
+	Math.abs()绝对值
+	Math.cos()余弦
+	Math.sin()正弦
+	Math.tan()正切
+	Math.ceil()向上取整
+	Math.floor()向下取整
+	Math.random()0~1之间的随机小数，不包含0和1
+	Math.round()四舍五入
+	Math.pow(a,b)a的b次方
+	Math.sqrt(a,b)a开b次方
+	Math.max(n1,n2...)最大值
+	Math.min(n1,n2...)最小值
 # JSON
-			 	JavaScript Object Notation
-			 		数据交换格式
-			 		长得像对象的字符串
-			 		两种规格'{}','[]'
-			 		属性名必须是双引号
-			 		不能写undefined
+	JavaScript Object Notation
+	数据交换格式
+	长得像对象的字符串
+	两种规格'{}','[]'
+	属性名必须是双引号
+	不能写undefined
 			 		
-			 		字符串必须双引号
-			 		数字,布尔值，null,对象
-			 		
+	字符串必须双引号、数字,布尔值，null,对象
 			 		
 			 		
-			 		JSON.parse()
-			 			JSON字符串转对象
-			 		JSON.stringify()
-			 			对象转JSON字符串
+			 		
+	JSON.parse()
+	JSON字符串转对象
+	JSON.stringify()
+	对象转JSON字符串
+
 # 6-8
 ## array 数组
 	存储0个或多个数据，有序性，多个数据间用逗号分隔
-			 	创建数组方式	
-			 	1.字面量
-			 		var arr = [];
-			 	2.对象
-			 		var arr = new Array(数据1,数据2...)
-			 		如果括号里只有一个数据，并且是数字，代表设置数组的长度,而不是放入一个数字类型的数据
-			 	3.Array.of(),ES6
-			 	为了解决方法2只有一个数据，并且是数字代表设置数组长度，ES6添加了一个方法Array.of()，传入一个数字，就是把数字放到数组内，而不是设置长度了
+	创建数组方式	
+		1.字面量
+			var arr = [];
+		2.对象
+			var arr = new Array(数据1,数据2...)
+			 如果括号里只有一个数据，并且是数字，代表设置数组的长度,而不是放入一个数字类型的数据
+		3.Array.of(),ES6
+			 为了解决方法2只有一个数据，并且是数字代表设置数组长度，ES6添加了一个方法Array.of()，传入一个数字，就是把数字放到数组内，而不是设置长度了
 ## array.push(数据1,数据2...)
-			 	作用：
-			 		向数组的最后添加数据
-			 	参数：
-			 		添加的数据，多个数据间用逗号分隔
+			 作用：
+			 	向数组的最后添加数据
+			 参数：
+			 	添加的数据，多个数据间用逗号分隔
 			 	返回值：number
 			 		新数组的长度（多少个数据）
 array.pop()
-			  作用：
-			  	   删除数组最后一个数据
+			 作用：
+			  	删除数组最后一个数据
 			 返回值：混合
 			  	  删除的那一个数据
 array.shift()
-			 * 作用：
-			 * 	   删除数组第一位数据
-			 * 返回值：混合
-			 * 	  返回删除的那一个数据 
+			 作用：
+			  	删除数组第一位数据
+			 返回值：混合
+		   	    返回删除的那一个数据 
 array.unshift(数据1,数据2...)
-			 	作用：
-			 		向数组的头部添加数据
-			 	参数：
-			 		添加的数据，多个数据之间用逗号分隔
+			 作用：
+			 	向数组的头部添加数据
+			 参数：
+			 	添加的数据，多个数据之间用逗号分隔
 			 	返回值：number
 			 		新数组的长度
 array.lastIndexOf(target,[start])
