@@ -929,3 +929,18 @@ array.splice(pos,length,val1,val2...)
 			 		1.原数组和新传入的值放到新数组里返回
 			        2.不改变原数组
 			        3.如果传入的是数组，会把原数组每项和传入数组的每项放到新数组里返回
+# 6-10
+	array.sort([fn])
+			 	作用：
+			 		数组每项排序
+			 	参数:
+			 		[fn]:处理函数，根据return后边的结果，>0,<0
+			 	返回值：array
+			 		1.排序后的原数组
+			 		2.不传参数，按字符的ASCII码的大小排序
+			 		3.传入处理函数，根据return的结果排序
+	 Array.from(arr)
+			 作用：	
+			 	 ES6，把类数组，或者有length的对象转成真正的数组 
+			 参数：
+			  	  arr:类数组，或者有length对象，类数组：arguments，获取元素tag,class
