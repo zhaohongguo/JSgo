@@ -944,3 +944,32 @@ array.splice(pos,length,val1,val2...)
 			 	 ES6，把类数组，或者有length的对象转成真正的数组 
 			 参数：
 			  	  arr:类数组，或者有length对象，类数组：arguments，获取元素tag,class
+# 6-11 
+数据的结构
+数组套数组，来表示层级关系，叫多维数组结构，一维是数组下只有一级，二维是数组下只套一层数组
+var arr = [
+			//第一级数据
+				{
+					name:'head',
+					child:[
+						//第二级数据
+						{
+							name:'meta',
+							child:[
+								//第三级数据
+							]
+						},
+						{
+							name:'title',
+							child:[]
+							
+						}
+					]
+				},
+				{
+					name:'body'
+				}
+			];
+一级数据可以用id和pId表示从属关系，id是数据编号，所以是唯一的
+# 递归
+在程序中直接或间接地调用自己
