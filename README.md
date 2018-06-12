@@ -973,3 +973,40 @@ var arr = [
 一级数据可以用id和pId表示从属关系，id是数据编号，所以是唯一的
 # 递归
 在程序中直接或间接地调用自己
+# 6-12
+冒泡排序，两两比较，如果前边比后边大，就交换位置，大的放后边，最后得到从小到大排序后的数组
+# DOM操作
+document object model文档对象模型
+赋予我们操作页面的权利，让我们可以新建，删除，修改页面内容
+html本质是字符串，js解析引擎熬把html解析成DOM，方便我们操作，DOM树，由一个个接点组成。
+node-节点
+	nodeType查看节点类型，返回数字，节点编号
+	nodeName查看节点名称，返回字符串
+	nodeValue查看节点值，返回字符串，没有返回null
+常用节点
+	元素节点		1
+		属性节点		2
+		文本节点		3
+		注释节点		8
+	document节点	9
+元素节点
+	nodeType:1
+	nodeName:标签名大写
+	nodeValue:null
+	firstChild:第一个子节点
+	lastChild:最后一个子节点
+	nextSibling:下一个兄弟节点
+	previousSibling:上一个兄弟节点
+	childNodes:所有第一级子节点
+	children：所有第一级子元素节点
+	parentNode:父级节点
+	firstElementChild:第一个元素子节点
+	lastElementChild:最后一个元素子节点
+	nextELementSibling:下一个兄弟元素节点
+	previousElementSilbling:上一个元素兄弟节点
+
+	没有时是null
+属性节点
+			nodeType:2
+			nodeName:属性名小写
+			nodeValue:值
