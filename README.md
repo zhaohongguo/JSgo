@@ -857,96 +857,96 @@ var date = new Date()
 		3.Array.of(),ES6
 			 为了解决方法2只有一个数据，并且是数字代表设置数组长度，ES6添加了一个方法Array.of()，传入一个数字，就是把数字放到数组内，而不是设置长度了
 ## array.push(数据1,数据2...)
-			 作用：
+			 >作用：
 			 	向数组的最后添加数据
-			 参数：
+			 >参数：
 			 	添加的数据，多个数据间用逗号分隔
 			 	返回值：number
 			 		新数组的长度（多少个数据）
 array.pop()
-			 作用：
+			 >作用：
 			  	删除数组最后一个数据
-			 返回值：混合
+			 >返回值：混合
 			  	  删除的那一个数据
 array.shift()
-			 作用：
+			 >作用：
 			  	删除数组第一位数据
-			 返回值：混合
+			 >返回值：混合
 		   	    返回删除的那一个数据 
 array.unshift(数据1,数据2...)
-			 作用：
+			 >作用：
 			 	向数组的头部添加数据
-			 参数：
+			 >参数：
 			 	添加的数据，多个数据之间用逗号分隔
 			 	返回值：number
 			 		新数组的长度
 array.lastIndexOf(target,[start])
-			 	作用：
+			 	>作用：
 			 		从指定位置开始查找数组里是否有指定值
-			 	参数：
+			 	>参数：
 			 		target：要找的值
 			 		[start]:可选，起始位置，默认是最后一位
-			 	返回值：number
+			 	>返回值：number
 			 		1.找到返回位置下标
 			 		2.没找到返回-1
 			 		3.从右向左
 array.includes(target)
-			  作用：
+			 > 作用：
 			 		数组里是否包含指定值
-			  参数：
+			  >参数：
 			  	target:指定值
-			  返回值：boolean
+			  >返回值：boolean
 			  		1.有,true
 			       2.没有,false
 			       3.===
 array.slice(start,[end])
-			 	作用：
+			 	>作用：
 			 		截取数组中的一段数据放新数组里返回
-			 	参数：
+			 	>参数：
 			 		start：起始位置
 			 		[end]:终止位置，可选，默认到最后一位
-			 	返回值：array
+			 	>返回值：array
 			 	   1.不传参数，返回完整新数组
 			 	   2.截取起始位置到终止位置的数据，不包含终止位置，放新数组里返回
 			 	   3.负数，长度+负数
 # 6-9
 array.splice(pos,length,val1,val2...)
-			 	作用：
+			 	>作用：
 			 		添加，删除，替换
-			 	参数：
+			 	>参数：
 			 		pos:位置
 			 		length:删除长度
 			 		val1,val2:添加数据，多个用逗号分隔
-			 	返回值：array
+			 	>返回值：array
 			 		1.如果有删除，把删除项放到数组里返回
 			 		2.没删除，返回空数组
 			 		3.操作的是原数组
 	array.concat(val1,val2...)
-			 作用： 		原数组和传入值放新数组里返回，连接2个数组
-			  参数：
+			 >>作用： 		原数组和传入值放新数组里返回，连接2个数组
+			  >>参数：
 			 	val1,val2:添加的数据，多个之间用逗号
-			  返回值：array
+			  >>返回值：array
 			 		1.原数组和新传入的值放到新数组里返回
 			        2.不改变原数组
 			        3.如果传入的是数组，会把原数组每项和传入数组的每项放到新数组里返回
 # 6-10
 	array.sort([fn])
-			 	作用：
+			 	>>>作用：
 			 		数组每项排序
-			 	参数:
+			 	>>>参数:
 			 		[fn]:处理函数，根据return后边的结果，>0,<0
-			 	返回值：array
+			 	>>>返回值：array
 			 		1.排序后的原数组
 			 		2.不传参数，按字符的ASCII码的大小排序
 			 		3.传入处理函数，根据return的结果排序
 	 Array.from(arr)
-			 作用：	
+			 >>>>作用：	
 			 	 ES6，把类数组，或者有length的对象转成真正的数组 
-			 参数：
+			 >>>>参数：
 			  	  arr:类数组，或者有length对象，类数组：arguments，获取元素tag,class
 # 6-11 
 数据的结构
-数组套数组，来表示层级关系，叫多维数组结构，一维是数组下只有一级，二维是数组下只套一层数组
+>数组套数组，来表示层级关系，叫多维数组结构，一维是数组下只有一级，二维是数组下只套一层数组
 var arr = [
 			//第一级数据
 				{
@@ -979,50 +979,50 @@ var arr = [
 document object model文档对象模型
 赋予我们操作页面的权利，让我们可以新建，删除，修改页面内容
 html本质是字符串，js解析引擎熬把html解析成DOM，方便我们操作，DOM树，由一个个接点组成。
-node-节点
-	nodeType查看节点类型，返回数字，节点编号
-	nodeName查看节点名称，返回字符串
-	nodeValue查看节点值，返回字符串，没有返回null
-常用节点
-	元素节点		1
-		属性节点		2
-		文本节点		3
-		注释节点		8
-	document节点	9
-元素节点
-	nodeType:1
-	nodeName:标签名大写
-	nodeValue:null
-	firstChild:第一个子节点
-	lastChild:最后一个子节点
-	nextSibling:下一个兄弟节点
-	previousSibling:上一个兄弟节点
-	childNodes:所有第一级子节点
-	children：所有第一级子元素节点
-	parentNode:父级节点
-	firstElementChild:第一个元素子节点
-	lastElementChild:最后一个元素子节点
-	nextELementSibling:下一个兄弟元素节点
-	previousElementSilbling:上一个元素兄弟节点
+## node-节点
+	>nodeType查看节点类型，返回数字，节点编号
+	>nodeName查看节点名称，返回字符串
+	>nodeValue查看节点值，返回字符串，没有返回null
+## 常用节点
+	>元素节点		1
+		>属性节点		2
+		>文本节点		3
+		>注释节点		8
+	>document节点	9
+## 元素节点
+	>nodeType:1
+	>nodeName:标签名大写
+	>nodeValue:null
+	>firstChild:第一个子节点
+	>lastChild:最后一个子节点
+	>nextSibling:下一个兄弟节点
+	>previousSibling:上一个兄弟节点
+	>childNodes:所有第一级子节点
+	>children：所有第一级子元素节点
+	>parentNode:父级节点
+	>firstElementChild:第一个元素子节点
+	>lastElementChild:最后一个元素子节点
+	>nextELementSibling:下一个兄弟元素节点
+	>previousElementSilbling:上一个元素兄弟节点
 
 	没有时是null
-属性节点
-			nodeType:2
-			nodeName:属性名小写
-			nodeValue:值
+## 属性节点
+			>nodeType:2
+			>nodeName:属性名小写
+			>nodeValue:值
 # 6-13
 DOM
-document.getElement获取整个HTML对象
-doucment.body获取整个body对象
-document.head 获取整个hede对象
-[context].querySelector 一个元素对象
-[context].querySelectorAll获取元素集合
-元素节点：html标签
-文本节点：文字内容(高级浏览器会把空格和换行当成文本节点)
-注释节点：注释内容
-document文档节点
+>document.getElement获取整个HTML对象
+>doucment.body获取整个body对象
+>document.head 获取整个hede对象
+>[context].querySelector 一个元素对象
+>[context].querySelectorAll获取元素集合
+>元素节点：html标签
+>文本节点：文字内容(高级浏览器会把空格和换行当成文本节点)
+>注释节点：注释内容
+>document文档节点
 # DOM的增删改
-document.createElement:在JS中动态创建一个HTML标签
+>document.createElement:在JS中动态创建一个HTML标签
 appendChild
 >容器.qppendChild(新元素)
 >把当前创建的新元素添加到容器的末尾位置
