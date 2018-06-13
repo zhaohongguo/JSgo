@@ -1010,3 +1010,23 @@ node-节点
 			nodeType:2
 			nodeName:属性名小写
 			nodeValue:值
+# 6-13
+DOM
+document.getElement获取整个HTML对象
+doucment.body获取整个body对象
+document.head 获取整个hede对象
+[context].querySelector 一个元素对象
+[context].querySelectorAll获取元素集合
+元素节点：html标签
+文本节点：文字内容(高级浏览器会把空格和换行当成文本节点)
+注释节点：注释内容
+document文档节点
+# DOM的增删改
+document.createElement:在JS中动态创建一个HTML标签
+appendChild
+>容器.qppendChild(新元素)
+>把当前创建的新元素添加到容器的末尾位置
+
+insertBefore
+>容器.insertBefore(新元素，老元素)
+>在当前容器中，把新创建的元素增加到老元素之前
