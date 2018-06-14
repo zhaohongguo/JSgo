@@ -1030,3 +1030,18 @@ appendChild
 insertBefore
 >容器.insertBefore(新元素，老元素)
 >在当前容器中，把新创建的元素增加到老元素之前
+# 6-14
+新建节点，删除，插入，替换，复制 
+			新建的节点没有插入到html的某个节点下，页面就没有新建的这个节点
+			  
+			 新建元素节点
+			 document.createElement('标签名')
+			  必须写document
+			  创建属性节点
+			  document.createAttribute()
+			  创建文本节点
+			   document.createTextNode()
+删除节点
+			 	父节点.removeChild(要删除的节点)
+				从父级下删除节点
+			 	返回删除的那个节点
