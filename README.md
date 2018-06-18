@@ -1071,3 +1071,11 @@ insertBefore
 			 		自身左外边界到定位父级的左内边界的距离，不带单位
 			 	元素.offsetTop
 			 		自身上外边界到定位父级的上内边界的距离，不带单位
+# 6-18	
+	元素.getBoundingClientRect()
+			 		元素到可视区的尺寸，对象,不带单位
+			 * top bottom left right width height
+			 * 
+			 * right,bottom是元素右，下边框外到可视区左，上的距离，left+width+border
+			 * width,height是加上border的尺寸,元素实际占位尺寸
+			 * width+padding+border
