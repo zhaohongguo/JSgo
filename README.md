@@ -1079,3 +1079,11 @@ insertBefore
 			 * right,bottom是元素右，下边框外到可视区左，上的距离，left+width+border
 			 * width,height是加上border的尺寸,元素实际占位尺寸
 			 * width+padding+border
+# 6-19
+# 跨域
+ajax 是不能跨域的
+1.document.domain = 'a.com'
+2.服务器代理：XHTMttpRequest代理文件
+3.script标签：Jsonp  JSONP只支持GET请求，不支持POST请求。
+Jsonp:json+padding(内填充)
+4.location.hash
