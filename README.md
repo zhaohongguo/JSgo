@@ -1094,3 +1094,4 @@ browser object model 浏览器对象模型
 BOM：Browser Object Model 是浏览器对象模型，浏览器对象模型提供了独立与内容的、可以与浏览器窗口进行互动的对象结构，BOM由多个对象构成，其中代表浏览器窗口的window对象是BOM的顶层对象，其他对象都是该对象的子对象。
 # BOM思维图
 ![image](https://github.com/zhaohongguo/JSgo/blob/master/image/BOM.png)
+# DOM思维图
