@@ -1087,3 +1087,8 @@ ajax 是不能跨域的
 3.script标签：Jsonp  JSONP只支持GET请求，不支持POST请求。
 Jsonp:json+padding(内填充)
 4.location.hash
+# 6-20
+BOM
+browser object model 浏览器对象模型
+什么是BOM？
+BOM：Browser Object Model 是浏览器对象模型，浏览器对象模型提供了独立与内容的、可以与浏览器窗口进行互动的对象结构，BOM由多个对象构成，其中代表浏览器窗口的window对象是BOM的顶层对象，其他对象都是该对象的子对象。
