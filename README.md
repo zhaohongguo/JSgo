@@ -1095,3 +1095,4 @@ BOM：Browser Object Model 是浏览器对象模型，浏览器对象模型提�
 # BOM思维图
 ![image](https://github.com/zhaohongguo/JSgo/blob/master/image/BOM.png)
 # DOM思维图
+![image](https://github.com/zhaohongguo/JSgo/blob/master/image/DOM.png)
