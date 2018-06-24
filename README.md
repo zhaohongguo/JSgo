@@ -1096,3 +1096,16 @@ BOM：Browser Object Model 是浏览器对象模型，浏览器对象模型提�
 ![image](https://github.com/zhaohongguo/JSgo/blob/master/image/BOM.png)
 # DOM思维图
 ![image](https://github.com/zhaohongguo/JSgo/blob/master/image/DOM.png)
+ 
+# 6-24
+函数的声明方式
+1.普通声明
+function fun(nu1,nu2){
+	returm ni1+nu2;
+}
+2.使用变量方式声明
+var fun2 = function(a,b){
+	return a+b;
+}
+3.使用new创建函数
+var fun3 = new Function('n1','n2','return n1-n2');//不建议
