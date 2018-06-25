@@ -29,7 +29,7 @@ a%b = 余数 或者 i%2 == 0 进行各行变色
 函数之内的this 1.直接调用 2. 调用该事件 函数的元素对象
 
 # 个人对this的新认识
-```JavaScript
+```
 for(var i=0;i<lis.length;i++){
 			lis[i].index = i;
 			lis[i].onclick = function(){
