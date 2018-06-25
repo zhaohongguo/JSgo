@@ -29,7 +29,7 @@ a%b = 余数 或者 i%2 == 0 进行各行变色
 函数之内的this 1.直接调用 2. 调用该事件 函数的元素对象
 
 # 个人对this的新认识
-
+```JavaScript
 for(var i=0;i<lis.length;i++){
 			lis[i].index = i;
 			lis[i].onclick = function(){
@@ -37,7 +37,8 @@ for(var i=0;i<lis.length;i++){
 			divs[this.index].style.background = 'red';
 			}
 		}
-这里的index就是属于个人自定义的属性 可以变成任何新的代名词 for循环中，当i =0时,lis[0].index = 0; 下面的function 中的this指向就是lis[0],而打印输出的内容就是0. div[this.index]就是点击第0个div的时候背景颜色变红（也就是li是1的时候） JS中是一次往下循环的 for(var i=0;i<lis.length;i++){ lis[i].onclick = function(){ //1.清除所有 for(var i=0;i<lis.length;i++){ lis[i].style.background = ''; } this.style.background = 'red'; } } 上面的函数也是this的指向问题。一次循环往下走。首先将this指向的style.background清理为空 然后再给this指向的li进行赋值变色。
+		```
+这里的index就是属于个人自定义的属性 可以变成任何新的代名词 for循环中，当i =0时,lis[0].index = 0; <br/>下面的function 中的this指向就是lis[0],而打印输出的内容就是0. div[this.index]就是点击第0个div的时候背景颜色变红（也就是li是1的时候）<br/> JS中是一次往下循环的 for(var i=0;i<lis.length;i++){ lis[i].onclick = function(){ //1.清除所有 for(var i=0;i<lis.length;i++){ lis[i].style.background = ''; } this.style.background = 'red'; } } 上面的函数也是this的指向问题。一次循环往下走。首先将this指向的style.background清理为空 然后再给this指向的li进行赋值变色。
 
 var prev = lis[0];
 
@@ -1100,30 +1101,38 @@ BOM：Browser Object Model 是浏览器对象模型，浏览器对象模型提�
 # 6-24
 函数的声明方式
 1.普通声明
+```JavaScript
 function fun(nu1,nu2){
 	returm ni1+nu2;
 }
+```
 2.使用变量方式声明
+```
 var fun2 = function(a,b){
 	return a+b;
 }
+```
 3.使用new创建函数
-var fun3 = new Function('n1','n2','return n1-n2');//不建议
+```
+var fun3 = new Function('n1','n2','return n1-n2');//不建议```
 # 6-25
-作用域补充：
-作用域分为全局和局部，当全局的变量和函数都是window对象的属性和方法。当你在函数内部定义变量就是局部变量，当你定义的函数，则为内部函数。
-如果局部变量跟全局的变量重名的时候，返回的是局部的名字。
-函数的参数属于局部变量，作用域仅限于改函数。
+作用域补充：<br/>
+作用域分为全局和局部，当全局的变量和函数都是window对象的属性和方法。当你在函数内部定义变量就是局部变量，当你定义的函数，则为内部函数。<br/>
+如果局部变量跟全局的变量重名的时候，返回的是局部的名字。<br/>
+函数的参数属于局部变量，作用域仅限于改函数。<br/>
+```JavaScript
 function add（a,b）{
 	return a+b;
 }
 alert(add(5,5));
-（a，b只能在函数add内使用，出去则无效）
-不存在块级作用域 ：if语句大括号不属于作用域，如果用window，能访问到就属于全局。
-for循环语句的大括号也不属于作用域，属于全局的。
+```
+（a，b只能在函数add内使用，出去则无效）<br/>
+不存在块级作用域 ：if语句大括号不属于作用域，如果用window，能访问到就属于全局。<br/>
+for循环语句的大括号也不属于作用域，属于全局的。<br/>
 
-基本包装类型：Boolean、Number、String
-两种开发模式：1.函数式2.面向对象（oop）
+基本包装类型：Boolean、Number、String<br/>
+两种开发模式：1.函数式2.面向对象（oop）<br/>
+```JavaScript
 1.创建对象
 var stu1 = new Object();
 stu1.name="艾比利";
@@ -1134,7 +1143,9 @@ stu1.stud=function(){
 alert(stu1.name);
 alert(stu1.age);
 stu1.study();
-2.使用工厂模式创建对象，解决实例化对象产生重复的问题
+```
+2.使用工厂模式创建对象，解决实例化对象产生重复的问题<br/>
+```JavaScript
 function stuObj(name,age){
 	var obj = new (Object);
 	obj.name = name;
@@ -1148,3 +1159,4 @@ var stu3 = stuObj("aa",22)
 alert(stu3.name);
 alert(stu3.age);
 stu3.study();
+```
