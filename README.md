@@ -37,7 +37,6 @@ for(var i=0;i<lis.length;i++){
 			divs[this.index].style.background = 'red';
 			}
 		}
-		```
 这里的index就是属于个人自定义的属性 可以变成任何新的代名词 for循环中，当i =0时,lis[0].index = 0; <br/>下面的function 中的this指向就是lis[0],而打印输出的内容就是0. div[this.index]就是点击第0个div的时候背景颜色变红（也就是li是1的时候）<br/> JS中是一次往下循环的 for(var i=0;i<lis.length;i++){ lis[i].onclick = function(){ //1.清除所有 for(var i=0;i<lis.length;i++){ lis[i].style.background = ''; } this.style.background = 'red'; } } 上面的函数也是this的指向问题。一次循环往下走。首先将this指向的style.background清理为空 然后再给this指向的li进行赋值变色。
 
 var prev = lis[0];
