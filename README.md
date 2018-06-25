@@ -1109,3 +1109,42 @@ var fun2 = function(a,b){
 }
 3.使用new创建函数
 var fun3 = new Function('n1','n2','return n1-n2');//不建议
+# 6-25
+作用域补充：
+作用域分为全局和局部，当全局的变量和函数都是window对象的属性和方法。当你在函数内部定义变量就是局部变量，当你定义的函数，则为内部函数。
+如果局部变量跟全局的变量重名的时候，返回的是局部的名字。
+函数的参数属于局部变量，作用域仅限于改函数。
+function add（a,b）{
+	return a+b;
+}
+alert(add(5,5));
+（a，b只能在函数add内使用，出去则无效）
+不存在块级作用域 ：if语句大括号不属于作用域，如果用window，能访问到就属于全局。
+for循环语句的大括号也不属于作用域，属于全局的。
+
+基本包装类型：Boolean、Number、String
+两种开发模式：1.函数式2.面向对象（oop）
+1.创建对象
+var stu1 = new Object();
+stu1.name="艾比利";
+stu1.age = 23;
+stu1.stud=function(){
+	alert("我叫"+this.name+"今年"+this.age+",我爱学习");
+};
+alert(stu1.name);
+alert(stu1.age);
+stu1.study();
+2.使用工厂模式创建对象，解决实例化对象产生重复的问题
+function stuObj(name,age){
+	var obj = new (Object);
+	obj.name = name;
+	obj.age = age;
+	obj.study=function(){
+		alert("我叫"+this.name+"今年"+this.age+",我爱学习");
+	}
+	return obj;
+}
+var stu3 = stuObj("aa",22)
+alert(stu3.name);
+alert(stu3.age);
+stu3.study();
