@@ -29,7 +29,7 @@ a%b = 余数 或者 i%2 == 0 进行各行变色
 函数之内的this 1.直接调用 2. 调用该事件 函数的元素对象
 
 # 个人对this的新认识
-```
+```JavaScript
 for(var i=0;i<lis.length;i++){
 			lis[i].index = i;
 			lis[i].onclick = function(){
@@ -1159,3 +1159,29 @@ alert(stu3.name);
 alert(stu3.age);
 stu3.study();
 ```
+# 6-26
+工厂模式解决了重复实例化的问题，但是存在识别的问题，因为根本无法搞清楚他们到底属于哪个类型对象<br/>
+
+我们可以采用构造函数（构造方法）来创建特定的对象<br/>
+```JavaScript
+function Student(name.age){
+	this.name = name;
+	this.age = age;
+	this.study=function(){
+		alert(this.name+","+this.age);
+	}
+}
+var stu1 =new Student("mimi",23);
+alert(stu1.name);
+alert(stu1.name);
+stu1.study();
+```
+构造函数的方法和工厂模式的方法不同：
+1.构造函数方法没有显示的创建对象（new Object()）;<br/>
+2.直接将属性和方法赋值给this对象；<br/>
+3.没有return语句<br/>
+构造函数的特点：
+1.函数名首字母大写，为了和普通函数区分<br/>
+2.使用构造函数必须使用new<br/>
+原型：
+引用类型中都含义prototype属性，该属性指向对象
