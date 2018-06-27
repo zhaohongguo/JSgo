@@ -1185,3 +1185,13 @@ stu1.study();
 2.使用构造函数必须使用new<br/>
 原型：
 引用类型中都含义prototype属性，该属性指向对象
+# 6-27
+alert(stu1.__proto__);[Object]得到stu1的原型对象obj<br/>
+alert(stu1.__proto__.__proto__);[Object,Objkect]得到stu1原型对象的原型<br/>
+alert(obj.__proto__);[Object,Object]得到Obj的原型对象<br/>
+alert(obj.__proto__.__proto__);[null]的到obj的原型对象的原型对象。<br/>
+Object的内部没有原型对象，到Object已经到头了<br/>
+protype和__proto__区别、constructor:<br/>
+__proto__是每个对象都有的属性，protype是函数才有的属性<br/>
+prototype属性让你可以给对象添加属性和方法<br/>
+constructors属性返回对创建此对象的数组函数的引用<br/>
