@@ -1195,3 +1195,87 @@ protype和__proto__区别、constructor:<br/>
 __proto__是每个对象都有的属性，protype是函数才有的属性<br/>
 prototype属性让你可以给对象添加属性和方法<br/>
 constructors属性返回对创建此对象的数组函数的引用<br/>
+# 6-28
+判断一个对象是否指向了构造函数的原型对象<br/>
+Student.prototype.isPrototypeOf(stu1);
+alert(sty1.name); stu1对象中的属性name值，--对象中含有name属性则优先使用对象中的<br/>
+如果将stu1.name的值删除（delete）才会使用原型对象中的name值<br/>
+hasOwnProperty('name')判断自己的本身有没有name属性//true/false<br/>
+'name' in stu1 In自身或者原型中只要有name属性都会返回ture
+ 原型模式:<br/>
+ ```JavaScript
+function Student(){}
+Student.prototype={
+	name:"lili",
+	age:23,
+	family:['哥哥','姐姐','弟弟','妹妹'],
+	fun:function(){
+		return this.name+this.age+this.family;
+	}
+
+};
+
+```
+构造函数+原型模式
+```JavaScript
+function Student(name,age)	//每个对象特有的数据使用构造函数
+{
+	this.name = name;
+	this.age = age;
+	this.family = ['哥哥','姐姐'];
+}
+//所有对象共享的内容定义在原型对象中
+Student.prototype={
+	fun:function(){
+		return this.name+this.age+this.family;
+	}
+};
+var stu1 = new Student('lili',20);
+stu1.family.push('妈妈');
+alert(stu1.family);
+var stu2 = new Student('haha',23);
+// stu2.family.push('爸爸');
+alert(stu2.family);
+```
+动态原型模式：<br/>
+```JavaScript
+function Student(name,age){
+	this.name = name;
+	this.age = age;
+	this.family=['哥哥','姐姐'];
+
+	Student.prototype.fun=function(){
+		return this.name+this.age+this.family;
+	}
+}
+var stu1 = new Student('lili',20);
+alert(stu1.fun())
+```
+寄生构造函数：工厂模式+构造函数：(不建议使用)<br/>
+```JavaScript
+function Student(name,age){
+	var obj = new Object();
+	obj.name= name;
+	obj.age = age;
+	obj.fun = function(){
+		return this.name+this.age;
+	};
+	return obj;
+}
+var stu = new Student("asda",12);
+alet(stu.fun());
+```
+稳妥构造函数:<br/>
+在安全的环境中，比如禁止使用this和new，这里的this是构造函数里不使用this，这里的new 是在外部实例化构造函数时不使用new<br/>
+```JavaScript
+function Person(name,age)
+{
+	var obj = new Object();
+	obj.fun= function(){
+		return name+age;//直接使用参数的值
+	}
+	return obj;
+}
+var person = Person("asda",12);//不能使用new创建对象
+alert(person.fun());
+```
