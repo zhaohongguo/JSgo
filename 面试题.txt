@@ -1,0 +1,125 @@
+function A(){
+alert(a);
+var a=10;
+alert(this.a);
+}
+A();
+
+
+var a = 100;    
+function fn(){    
+var b = 2 * a;    
+var a = 200;    
+var c = a / 2;    
+alert(b);    
+alert(c);    
+}    
+fn()
+
+
+function a(b){
+	alert(b);
+	function b(){
+		alert(b);
+	}
+	b();
+}
+a(1);
+
+
+
+function a(b){
+	alert(b);
+	b=function (){
+		alert(b);
+	}
+	b();
+}
+a(1);
+
+var a=3;
+ function c(){
+    alert(a);
+ }
+ function fn(){
+  var a=4;
+  c();
+ }
+ fn();
+ 
+ 
+ var a=3;
+ function c(a){
+    alert(a);
+ }
+ function fn(){
+  var a=4;
+  c(a);
+ };
+ fn();
+ 
+ 
+ alert(a)
+	alert(b)
+	var b = function(){alert(a)};
+	alert(b)
+	var a = 1;
+	b();
+	alert(a);
+	var a = 12;
+	alert(a);
+	function a(){alert(1)};
+	a();
+	alert(a);
+	
+	
+	function a(){
+		return function(){
+			alert(1);
+		}
+	}
+	alert(a);
+	a();
+	function b(a,b){
+		a = 20;
+		return function(){
+			b = 10;
+			a = 20;
+			alert(a+b);
+		}
+	}
+	alert(b);
+	alert(b());
+	b()();
+	b(9,11)();
+	alert(a);
+	
+	
+	alert(a) ;
+	var a = function(){alert(1)};
+	a();
+	alert(a) 
+	function a(a,b){
+		alert(1);
+		a = 10;
+		return function(b){
+			a = 1
+			alert(a);
+		}
+	}
+	alert(a());
+	
+	
+	
+var a = 10;	
+function fn(){
+	var a = b = 20;
+	alert(this.a)
+	alert(this.b)
+}
+fn();
+
+
+
+
+

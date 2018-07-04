@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt">
+	<input type="button" value="留言" id="btn">
+	<ul id="list"></ul>
+	<script>
+		var txt = document.getElementById('txt');
+		var btn = document.getElementById('btn');
+		var list = document.getElementById('list');
+		btn.onclick = function(){
+
+			var val = txt.value;
+
+			list.innerHTML += '<li>'+val+'</li>';
+
+			// 让留言增加可以用+=  或者 在后面增加list.innerHTML
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top:200px;
+				left:400px;
+				/*cursor:nw-resize;*/
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box = document.getElementById('box');
+			box.onmousedown = function(ev){
+				//按下坐标，判断是否在边上，小于10px
+				var x = ev.clientX;
+				var y = ev.clientY;
+				//得到box的4边坐标，自身宽高
+				var pos = this.getBoundingClientRect();
+				//t记录4边4角，如果在中间就是空字符串是false
+				var t = '';
+				//左上
+				if(x-pos.left<10&&y-pos.top<10){
+					t = 'leftTop';
+				}
+				//右上
+				else if(pos.right-x<10&&y-pos.top<10){
+					t = 'rightTop';
+				}
+				//左下
+				else if(x-pos.left<10&&pos.bottom-y<10){
+					t = 'leftBottom';
+				}
+				//右下
+				else if(pos.right-x<10&&pos.bottom-y<10){
+					t = 'rightBottom';
+				}
+				//按下x坐标-box左边小于10，在左边
+				else if(x-pos.left<10){
+					t = 'left';				
+				}
+				//box右边-x小于10，在右边
+				else if(pos.right-x<10){
+					t = 'right';
+				}
+				//上
+				else if(y-pos.top<10){
+					t = 'top';
+				}
+				//下
+				else if(pos.bottom-y<10){
+					t = 'bottom';
+				}
+				document.onmousemove = function(ev){
+					//当前鼠标位置
+					var dL = ev.clientX;
+					var dT = ev.clientY;
+					var w,h,xL,xT;
+					//左上
+					if(t=='leftTop'){
+						w = pos.width+(x-dL);
+						h = pos.height+(y-dT);
+						if(w>100){
+							xL =pos.left-(x-dL);
+							box.style.width = w+'px';
+							box.style.left = xL+'px';
+						}
+						if(h>100){
+							xT = pos.top-(y-dT);
+							box.style.height = h+'px';
+							box.style.top = xT+'px';
+						}
+					}
+					//右上
+					else if(t=='rightTop'){
+						w = pos.width+(dL-x);
+						if(w>100){
+							box.style.width = w+'px';
+						}
+						h = pos.height+(y-dT);
+						if(h>100){
+							xT = pos.top-(y-dT);
+							box.style.height = h+'px';
+							box.style.top = xT+'px';
+						}
+					}
+					//左下
+					else if(t=='leftBottom'){
+						w = pos.width+(x-dL);
+						if(w>100){
+							xL =pos.left-(x-dL);
+							box.style.width = w+'px';
+							box.style.left = xL+'px';
+						}
+						h = pos.height+(dT-y);
+						if(h>100){
+							box.style.height = h+'px';
+						}
+					}
+					//右下
+					else if(t=='rightBottom'){
+						w = pos.width+(dL-x);
+						if(w>100){
+							box.style.width = w+'px';
+						}
+						h = pos.height+(dT-y);
+						if(h>100){
+							box.style.height = h+'px';
+						}
+					}
+					//左
+					else if(t=='left'){
+						//当前宽度=按下时box宽度+鼠标位移差值
+						w = pos.width+(x-dL);
+						//宽度最小是100，所以大于100才能改变宽度，left定位
+						if(w>100){
+							xL =pos.left-(x-dL);
+							box.style.width = w+'px';
+							box.style.left = xL+'px';
+						}	
+					}
+					//右
+					else if(t=='right'){
+						w = pos.width+(dL-x);
+						if(w>100){
+							box.style.width = w+'px';
+						}
+					}
+					//上
+					else if(t=='top'){
+						h = pos.height+(y-dT);
+						if(h>100){
+							xT = pos.top-(y-dT);
+							box.style.height = h+'px';
+							box.style.top = xT+'px';
+						}
+					}
+					//下
+					else if(t=='bottom'){
+						h = pos.height+(dT-y);
+						if(h>100){
+							box.style.height = h+'px';
+						}
+					}	
+				}
+				document.onmouseup = function(){
+					document.onmousemove = document.onmouseup = null;
+				}
+				
+			}
+			//改变鼠标光标
+			box.onmousemove = function(ev){
+				var x = ev.clientX;
+				var y = ev.clientY;
+				var pos = this.getBoundingClientRect();
+				if(x-pos.left<10&&y-pos.top<10){
+					this.style.cursor = 'nw-resize';
+				}
+				else if(pos.right-x<10&&y-pos.top<10){
+					this.style.cursor = 'ne-resize';
+				}
+				else if(x-pos.left<10&&pos.bottom-y<10){
+					this.style.cursor = 'ne-resize';
+				}
+				else if(pos.right-x<10&&pos.bottom-y<10){
+					this.style.cursor = 'nw-resize';
+				}
+				else if(x-pos.left<10){
+					this.style.cursor = 'e-resize';
+				}
+				else if(pos.right-x<10){
+					this.style.cursor = 'e-resize';
+				}
+				else if(y-pos.top<10){
+					this.style.cursor = 'n-resize';
+				}
+				else if(pos.bottom-y<10){
+					this.style.cursor = 'n-resize';
+				}
+				else{
+					this.style.cursor = '';
+				}
+			}
+		</script>
+	</body>
+</html>
