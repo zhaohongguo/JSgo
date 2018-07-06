@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		ajax 四步
+
+		1.创建一个AJAX对象
+		var xhr = new XMLHhttpRequest;
+		2.发送前的基本信息配置
+			配置的请求方式（GRT POST PUT DELETE...）
+			打开一个URL地址（配置向哪一个服务器地址发请求）
+			同步还是异步（true 代表异步 false代表同步，默认是true）
+			[username]向服务器提供请求用户名
+			[userpass]向服务器提供用户密码
+			这两个值一般不写，只有服务器做了安全限制，只允许特定的用户访问的话，才传递过去
+			xhr.open("get","/data.txt",false,[username],[userpass]);
+		3.给onreadystatechange这个事件绑定一个方法，监听状态的改变（只要状态改变就会触发方法执行）
+		xhr.onreadystatechange=function(){
+			xhr.readyState:AJAX状态码，可以代表当前AJAX处理的进度
+				0 UNSENT	当前的请求还没有发送
+				1 OPENED	URL地址已经打开（发送前的参数配置 已经完成）
+				2 HEADERS_RECEIVED	响应头信息已经接收
+				3 LOADING	主要返回的内容正在服务器端进行准备处理
+				4 DONE 		响应主体的内容已经成功返回到客户端
+			xhr.status:HTTP网络状态码，描述了服务器响应内容的状态
+			200 OR ^2\d{2} {200或者以2开头的} 都代表响应主体内容已经成功返回
+			301	永久重定向/永久转移
+			302	临时重定向/临时转移   服务器的负载均衡
+			304	本次获取的内容是缓存数据
+
+			400	客户端传递给服务器端的参数出现错误
+			401	无权限访问
+			404	客户端访问的地址不存在
+
+			500	未知的服务器错误
+			503	服务器已经超负荷
+			if (xhr.readyState===4 && /^2\d{2}$/.test(xhr.status)) {
+
+			}
+		};
+		发送请求：参数是请求主体中传递给服务器的内容
+		xhr.send(null);
+	</script>
+</body>
+</html>
